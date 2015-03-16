@@ -1,0 +1,72 @@
+@import url("//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic");
+
+body {font: 300 12px "Source Sans Pro"; background: url(../img/bg2.png) repeat scroll left top #151718; color: #83817C;}
+h1, h2, h3, h4, h5, h6 {cursor: default; margin: 5px 0px 10px; padding: 0px; color: #83817C; font-weight: 300; text-transform: none;}
+h1 {font-size: 27px;} h2 {font-size: 24px;} h3 {font-size: 21px;} h4 {font-size: 18px;} h5 {font-size: 15px;} h6 {font-size: 12px;}
+*, *:hover, *:focus,a, a:hover, a:focus {outline: 0px none !important; text-decoration: none;}
+a {color: #95A5A6;} a:hover, a:active {color: #FFFFFF;} a:focus {color: #95A5A6;}
+a > h1,h2,h3,h4,h5,h6 {cursor: pointer;}
+ul {list-style: none; padding: 0px;}
+p {margin: 0px;}
+hr {margin: 5px 0px; border-color: #DDDDDD; box-shadow: 0px 2px 5px #BBB;}
+
+
+#wrapper {background-color: #00BC8C; padding: 15px 15px 0px; border-radius: 12px; margin-top: 20px; margin-bottom: 20px;}
+.container {width: 980px; margin: 0 auto;}
+.radio, .checkbox {margin: 0px; }
+.radio label, .checkbox label {color: #B3B3B3; line-height: 22px;}
+.hq_poster_wrap { width: 787px; height: 228px; position: relative; margin: 20px 0; border:1px solid #ccc;}
+.midi_poster_wrap { width: 190px; height: 77px; position: relative; margin:  20px 0; border:1px solid #ccc;}
+.blog_poster_wrap { width: 705px; height: 157px; position: relative; margin: 20px auto; border:1px solid #ccc;}
+.hq_poster {position: absolute; width: 787px;}
+.midi_poster {position: absolute; width: 190px;}
+.blog_poster {position: absolute; left: 72px;}
+.poster-container {position: relative;}
+.btn-border {border: 1px solid #FFF; background-color: transparent;}
+.btn-border:hover {color: #00BC8C; border: 1px solid #FFF; background-color: #FFF;}
+
+/* Manipulation */
+.dropdown-menu .divider {background-color: #00BC8C;}
+.dropdown-menu > li > a {text-transform: none; color: #FFFFFF; padding: 0px 10px;}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {text-decoration: none; color: #00BC8C; background-color: transparent; }
+
+.page-header {padding-bottom: 10px; margin: 20px 0px; border-bottom: 1px solid #DDD; }
+
+.form-border > .form-group {margin-bottom: 10px;}
+.form-border > .form-group > .form-control {background-color: transparent; padding: 6px 10px; height: auto; color: #fff; border-color: rgba(255,255,255,0.6); border-radius: 2px;}
+
+.media .pull-left i {color: #83817C;}
+
+/* Main Styles */
+header {background-color: #151718; border-radius: 10px 10px 0px 0px; margin: -15px -15px 0px;}
+header .navbar {margin: 0px; border-radius: 0px;}
+header .navbar .navbar-right {margin-right: 15px;}
+header .navbar .navbar-right > li:not(.divider) {padding: 15px 0px;}
+header .navbar .navbar-right > li > a {color: #00BC8C; padding: 3px 15px; text-transform: none; border: 1px solid #00BC8C; border-radius: 5px;}
+header .navbar .navbar-right .open > a, header .navbar .navbar-right .open > a:hover, header .navbar .navbar-right.open > a:focus {background-color: rgb(21, 23, 24); border-color: #00BC8C; color: #FFF; z-index: 3; border-width: 1px 1px 0px; border-radius: 5px 5px 0px 0px; }
+header .navbar .navbar-right > li > .dropdown-menu {margin-top: -16px; background-color: #151718; border-color: #00BC8C; border-width: 1px; z-index: 2; border-radius: 5px 0px 5px 5px; }
+header .navbar .navbar-right > li > a:hover {color: #FFFFFF; background-color: transparent;}
+/*header .navbar .navbar-right > li > a:focus {background-color: transparent;}*/
+header .navbar .navbar-brand {color: #ABB7B7; padding: 15px;}
+header .navbar .navbar-brand h1 {color: #95A5A6; margin: 0px; font-size: 32px;}
+header .navbar .navbar-brand:hover h1 {color: #FFFFFF;}
+header .navbar .navbar-brand h1 small {color: #CCCCCC; font-size: 13px;}
+
+
+aside#sidebar-menu {margin-top: 10px;}
+aside#sidebar-menu ul {margin: -10px -15px;}
+aside#sidebar-menu ul li {margin-bottom: 0px;}
+aside#sidebar-menu ul li a {color: #EEEEEE; padding: 10px 0px; display: block; font-size: 16px; text-align: center; transition: .3s;}
+aside#sidebar-menu ul li a:hover {color: #FFFFFF; transition: .3s;}
+aside#sidebar-menu ul li a i {display: block; font-size: 24px; margin-bottom: 5px; transition: .3s;}
+aside#sidebar-menu ul li a:hover i {transform: scale(1.4); transition: .3s;}
+
+
+section#content {padding: 15px 15px 0px; background-color: #ECF0F1; min-height: 510px; max-height: 510px; overflow: auto;}
+section#content .main-title {border-bottom: 1px solid #FFACAC; padding: 10px; margin-bottom: 10px;}
+section#content .main-title i {margin-right: 5px; }
+
+
+aside#member-menu {max-height: 510px; overflow: auto; color: #FFF;}
+aside#member-menu .main-title {background-color: #FFF; color: #00BC8C; border: 1px solid rgba(255, 255, 255, 0.6); padding: 5px; margin: 10px -5px; box-shadow: 3px -3px 0px rgba(255, 255, 255, 0.8);}
+aside#member-menu .main-title i {margin-right: 5px; }

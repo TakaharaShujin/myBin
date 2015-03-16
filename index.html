@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr" ng-app="myBin">
+<head>
+	<meta charset="UTF-8">
+	<title>myBin| Kişiye Özel Link Bankası</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/angular.min.js"></script>
+	<script type="text/javascript" src="assets/js/uiRouter.js"></script>
+	<script type="text/javascript" src="assets/js/ngStorage.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/custom.js"></script>
+</head>
+<body>
+	<section id="wrapper" class="container">
+		<header>
+			<nav class="navbar" role="navigation">
+				<div class="navbar-header">
+					<a class="navbar-brand" ui-sref="index"><h1> myBin <small>| Kişiye Özel Link Bankası</small></h1></a>
+				</div>
+				<ul class="nav navbar-nav navbar-right" ng-if="logged_user">
+					<li class="dropdown">
+						<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">TakaharaShujin</a>
+						<ul class="dropdown-menu">
+							<li><a ui-sref="user.linkbank">Link Bankam</a></li>
+							<li><a ui-sref="user.account">Hesap Bilgilerim</a></li>
+							<li><a ui-sref="user.logout">Çıkış</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<div class="row">
+			<aside class="col-lg-1" id="sidebar-menu" ng-if="logged_user">
+				<ul>
+					<li><a ui-sref="popular"><i class="fa fa-asterisk"></i> Popüler Arşivler</a></li>
+					<li><a ui-sref="archivers"><i class="fa fa-user"></i> Son Arşivciler</a></li>
+					<li><a ui-sref="archives"><i class="fa fa-archive"></i> Son Arşivler</a></li>
+				</ul>
+			</aside>
+			<section id="content"  ng-class="{ 'col-lg-8' : logged_user, 'col-lg-9' : !logged_user }" ui-view></section>
+			<aside class="col-lg-3" id="member-menu" ng-controller="SiteUserController">
+				<div ng-if="!logged_user">
+					<h4 class="main-title"><i class="fa fa-sign-in"></i> Giriş Yap</h4>
+					<form autocomplete="off" class="form-border" ng-submit="signin()">
+						<div class="form-group">
+							<label for="email">Email</label>
+							<input type="email" name="email" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="password">Şifre</label>
+							<input type="password" name="password" class="form-control">
+						</div>
+						<button type="submit" class="btn btn-border btn-block">Giriş Yap</button>
+					</form>
+					<h4 class="main-title"><i class="fa fa-plus"></i> Kayıt Ol</h4>
+					<form autocomplete="off" class="form-border" ng-submit="register()">
+						<div class="form-group">
+							<label for="username">Kullanıcı Adı</label>
+							<input type="text" name="username" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="email">Email</label>
+							<input type="email" name="email" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="password">Şifre</label>
+							<input type="password" name="password" class="form-control">
+						</div>
+						<button type="submit" class="btn btn-border btn-block">Kayıt Ol</button>
+					</form>
+				</div>
+				<div ng-if="logged_user">
+					<h4 class="main-title"><i class="fa fa-plus-square"></i> Link Ekle</h4>
+					<form autocomplete="off" class="form-border" ng-submit="add_link()">
+						<div class="form-group">
+							<label for="title">Başlık</label>
+							<input type="text" name="title" id="title" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="tags">Etiket</label>
+							<input type="text" name="tags" id="tags" class="form-control">
+							<p class="help-text">Birden fazla etiket eklerken etiketleri virgül ile ayırınız.</p>
+						</div>
+						<div class="form-group">
+							<label for="description">Açıklama</label>
+							<textarea name="description" id="description" rows="5" class="form-control"></textarea>
+						</div>
+						<button type="submit" class="btn btn-border btn-block">Ekle</button>
+					</form>
+				</div>
+			</aside>
+		</div>
+	</section>
+</body>
+</html>
